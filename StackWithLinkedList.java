@@ -1,14 +1,20 @@
 
 
-class BasicSyntax{
+class StackWithLinkedList{
     public static void main(String[] args) {
         Stack stack =new Stack();
         stack.push(1);
         stack.push(2);
         stack.push(3);
         stack.push(4);
-        //stack.display();
-        System.out.println(stack.isEmpty());
+        stack.display();
+
+        while(stack.isEmpty()==false){
+            stack.peek();
+            stack.pop();
+        }
+        stack.display();
+
     }
 }
     class Node{
@@ -22,7 +28,7 @@ class BasicSyntax{
     class Stack{
         Node head=null;
         public boolean isEmpty(){
-            if(head==null){
+            if(head!=null){
                 return false;
             }
             return true;
